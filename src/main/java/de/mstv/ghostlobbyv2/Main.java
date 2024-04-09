@@ -1,7 +1,6 @@
 package de.mstv.ghostlobbyv2;
 
-import de.mstv.ghostlobbyv2.Commands.Command_CC;
-import de.mstv.ghostlobbyv2.Commands.Command_Fly;
+import de.mstv.ghostlobbyv2.Commands.*;
 import de.mstv.ghostlobbyv2.Interact.AdminTools;
 import de.mstv.ghostlobbyv2.Interact.Compass;
 import de.mstv.ghostlobbyv2.Interact.PlayerHider;
@@ -42,6 +41,9 @@ public final class Main extends JavaPlugin {
 
         getCommand("fly").setExecutor(new Command_Fly());
         getCommand("cc").setExecutor(new Command_CC());
+        getCommand("gm0").setExecutor(new Command_Survival());
+        getCommand("gm1").setExecutor(new Command_Creative());
+        getCommand("gm3").setExecutor(new Command_Spectator());
 
 
 
