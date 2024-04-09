@@ -20,9 +20,7 @@ public class Compass implements Listener {
 
     @EventHandler
     public void onInteract(PlayerInteractEvent e) {
-
         Player p = e.getPlayer();
-
         try {
             if (e.getItem().getItemMeta().getDisplayName().equalsIgnoreCase("§aNavigator")) {
                 if (e.getAction().equals(Action.RIGHT_CLICK_AIR) || e.getAction().equals(Action.RIGHT_CLICK_BLOCK)) {
@@ -76,7 +74,7 @@ public class Compass implements Listener {
                         if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§aSpawn")) {
 
                             p.sendMessage(Main.prefix + "§aDu bist nun am §eSpawn§a!");
-                            p.playSound(p.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 2F, 1F);
+                            p.playSound(p.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1, 1);
                             Location loc = new Location(Bukkit.getWorld(Main.world), 0, 51, 0);
                             loc.setYaw((float) -90);
                             loc.setPitch((float) 0);
@@ -105,7 +103,7 @@ public class Compass implements Listener {
                         if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§aSurvival")) {
 
                             p.sendMessage(Main.prefix + "§aDu bist nun beim Spielmodus §eSurvival§a!");
-                            p.playSound(p.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 2F, 1F);
+                            p.playSound(p.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1, 1);
                             Location loc = new Location(Bukkit.getWorld(Main.world), -34, 50, 0);
                             loc.setYaw((float) -90);
                             loc.setPitch((float) 0);
@@ -134,7 +132,7 @@ public class Compass implements Listener {
                         if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§aCityBuild")) {
 
                             p.sendMessage(Main.prefix + "§aDu bist nun beim Spielmodus §eCityBuild§a!");
-                            p.playSound(p.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 2F, 1F);
+                            p.playSound(p.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1, 1);
                             Location loc = new Location(Bukkit.getWorld(Main.world), 0, 50, 34);
                             loc.setYaw((float) -90);
                             loc.setPitch((float) 0);
@@ -163,7 +161,7 @@ public class Compass implements Listener {
                         if (e.getCurrentItem().getItemMeta().getDisplayName().equalsIgnoreCase("§cBedwars")) {
 
                             p.sendMessage(Main.prefix + "§aDu bist nun beim Spielmodus §eBedwars§a!");
-                            p.playSound(p.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 2F, 1F);
+                            p.playSound(p.getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1, 1);
                             Location loc = new Location(Bukkit.getWorld(Main.world), 0, 50, -34);
                             loc.setYaw((float) -90);
                             loc.setPitch((float) 0);

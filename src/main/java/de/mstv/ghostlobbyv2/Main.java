@@ -3,6 +3,7 @@ package de.mstv.ghostlobbyv2;
 import de.mstv.ghostlobbyv2.Commands.*;
 import de.mstv.ghostlobbyv2.Interact.AdminTools;
 import de.mstv.ghostlobbyv2.Interact.Compass;
+import de.mstv.ghostlobbyv2.Interact.Kleiderschrank;
 import de.mstv.ghostlobbyv2.Interact.PlayerHider;
 import de.mstv.ghostlobbyv2.Listener.*;
 import org.bukkit.Bukkit;
@@ -10,7 +11,6 @@ import org.bukkit.entity.Player;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import javax.print.DocFlavor;
 import java.util.ArrayList;
 
 public final class Main extends JavaPlugin {
@@ -38,6 +38,8 @@ public final class Main extends JavaPlugin {
         pm.registerEvents(new HungerListener(), this);
         pm.registerEvents(new BuildListener(), this);
         pm.registerEvents(new DropPicupListener(), this);
+        pm.registerEvents(new InvClickListener(), this);
+        pm.registerEvents(new Kleiderschrank(), this);
 
         getCommand("fly").setExecutor(new Command_Fly());
         getCommand("cc").setExecutor(new Command_CC());
