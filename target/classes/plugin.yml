@@ -1,0 +1,7 @@
+name: GhostLobbyv2
+version: '1.0'
+main: de.mstv.ghostlobbyv2.Main
+api-version: '1.19'
+commands:
+  fly:
+  cc:
