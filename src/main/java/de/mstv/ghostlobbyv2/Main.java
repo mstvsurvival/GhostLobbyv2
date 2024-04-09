@@ -4,10 +4,7 @@ import de.mstv.ghostlobbyv2.Commands.*;
 import de.mstv.ghostlobbyv2.Interact.AdminTools;
 import de.mstv.ghostlobbyv2.Interact.Compass;
 import de.mstv.ghostlobbyv2.Interact.PlayerHider;
-import de.mstv.ghostlobbyv2.Listener.HungerListener;
-import de.mstv.ghostlobbyv2.Listener.JoinItems;
-import de.mstv.ghostlobbyv2.Listener.PlayerJoinListener;
-import de.mstv.ghostlobbyv2.Listener.WeatherListener;
+import de.mstv.ghostlobbyv2.Listener.*;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.PluginManager;
@@ -25,6 +22,7 @@ public final class Main extends JavaPlugin {
     public static String world = "Lobby [by EnrazeGames]";
 
     public static ArrayList<Player> Playerhider = new ArrayList<>();
+    public static ArrayList<Player> buildmode = new ArrayList<>();
 
     @Override
     public void onEnable() {
@@ -38,12 +36,15 @@ public final class Main extends JavaPlugin {
         pm.registerEvents(new PlayerJoinListener(), this);
         pm.registerEvents(new WeatherListener(), this);
         pm.registerEvents(new HungerListener(), this);
+        pm.registerEvents(new BuildListener(), this);
+        pm.registerEvents(new DropPicupListener(), this);
 
         getCommand("fly").setExecutor(new Command_Fly());
         getCommand("cc").setExecutor(new Command_CC());
         getCommand("gm0").setExecutor(new Command_Survival());
         getCommand("gm1").setExecutor(new Command_Creative());
         getCommand("gm3").setExecutor(new Command_Spectator());
+        getCommand("build").setExecutor(new Command_Build());
 
 
 

@@ -5,3 +5,7 @@ api-version: '1.19'
 commands:
   fly:
   cc:
+  gm0:
+  gm1:
+  gm3:
+  build:
